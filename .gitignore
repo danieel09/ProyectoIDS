@@ -1,0 +1,14 @@
+# Ignorar ejecutables generados
+*.exe     # Ignora los archivos ejecutables generados en Windows
+
+# Ignorar archivos objetos generados
+*.o       # Ignora los archivos objeto generados por la compilación
+
+# Ignorar archivos de configuración específicos de DevC++
+*.dev     # Archivo de proyecto de DevC++
+*.layout  # Archivo de configuración de DevC++
+WIN       # Ignorar archivo WIN generado por DevC++
+
+# Ignorar carpetas generadas
+/build/   # Ignora cualquier carpeta de compilación que puedas tener
+/bin/     # Ignora la carpeta binaria (si la tienes)
