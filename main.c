@@ -5,18 +5,21 @@
 int main(int argc, char *argv[]) {
 	
 	int opcion;
-	
-	printf("Menu de seleccion de figura: \n");
+	double lado, resultado;
+do {
+
+
+	printf("Selecciona la figura de la que quieres calcular el area: \n");
 	
 		printf("1. Circulo\n");
 		printf("2. Triangulo\n");
 		printf("3. Cuadrado\n");
-		Printf("4. Rectangulo\n");
+		printf("4. Rectangulo\n");
 		printf("5. Trapecio\n");
-		printf("Pulsa cualquier otra tecla para salir.\n");
+		printf("introduce cualquier otra cosa para cerrar el programa.\n");
 		
 			printf("opcion: ");
-				scanf("%d", opcion);
+				scanf("%d", &opcion);
 				
 	switch(opcion) 
 	{
@@ -27,7 +30,11 @@ int main(int argc, char *argv[]) {
 			
 			
 		case 3:
-			
+				printf("Cuanto mide uno de sus lados? ");
+					scanf("%lf", &lado);
+						resultado = lado * lado;
+				printf("----- Area = %.2lf -----\n", resultado);
+			break;
 			
 		case 4:
 			
@@ -36,6 +43,7 @@ int main(int argc, char *argv[]) {
 			
 			
 	}			
-				
+} while (opcion >= 1 && opcion <= 5);
+
 	return 0;
 }
