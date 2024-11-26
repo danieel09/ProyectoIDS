@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
 	int opcion;
-	double lado, resultado;
+	double lado, resultado, radio, pi = 3.1416;
 	double baseMenor, baseMayor, altura;
 	
 	do {
@@ -23,6 +23,10 @@ int main(int argc, char *argv[]) {
 		switch(opcion) 
 		{
 			case 1:
+				printf("\nIngrese el radio del circulo:");
+				scanf(" %lf", &radio);
+				resultado = pi * radio * radio;
+				printf("\n----- Area = %.2lf -----\n", resultado);
 				break;
 			case 2:
 				break;
