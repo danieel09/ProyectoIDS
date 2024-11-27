@@ -3,43 +3,75 @@
 #include <math.h>
 
 int main(int argc, char *argv[]) {
-
-	printf("Hola Mundo\n");
-
-	
 	int opcion;
+	double lado, resultado, radio, pi = 3.1416;
+	double baseMenor, baseMayor, altura, base;
 	
-	printf("Menu de seleccion de figura: \n");
-	
-		printf("1. Circulo\n");
-		printf("2. Triangulo\n");
-		printf("3. Cuadrado\n");
-		Printf("4. Rectangulo\n");
-		printf("5. Trapecio\n");
-		printf("Pulsa cualquier otra tecla para salir.\n");
+	do {
+		printf("\t\nArea de Figuras :)\n");
+		printf("Figuras de las que puedes calcular el area: \n");
 		
-			printf("opcion: ");
-				scanf("%d", opcion);
+			printf("\n1. Circulo");
+			printf("\n2. Triangulo");
+			printf("\n3. Cuadrado");
+			printf("\n4. Rectangulo");
+			printf("\n5. Trapecio");
+			printf("\n6.Salir");
+			printf("\nIngresa la opcion: ");
+			scanf("%d", &opcion);
+					
+		switch(opcion) 
+		{
+			case 1:
+				printf("\nIngrese el radio del circulo:");
+				scanf(" %lf", &radio);
+				resultado = pi * radio * radio;
+				printf("\n----- Area = %.2lf -----\n", resultado);
+				break;
+			case 2:
+				printf("\nIngresa la altura del triangulo: ");
+				scanf(" %lf", &altura);
+				printf("Ingresa la base del triangulo: ");
+				scanf(" %lf", &base);
 				
-	switch(opcion) 
-	{
-		case 1:
-			
-			
-		case 2:
-			
-			
-		case 3:
-			
-			
-		case 4:
-			
-			
-		case 5:
-			
-			
-	}			
+				printf("Realizando calculos...");
+				resultado = (altura * base) / 2;
+				printf("\n----- Area = %.2lf -----\n", resultado);				
+				break;
+			case 3:
+				printf("\nCuanto mide uno de sus lados? ");
+				scanf(" %lf", &lado);
+				resultado = lado * lado;
+				printf("\n----- Area = %.2lf -----\n", resultado);
+				break;
+			case 4:
+				printf("\nIngrese la medida de cada lado.");
+				printf("\nBase: ");
+				scanf(" %lf", &base);
+				printf("Altura: ");
+				scanf(" %lf", &altura);
+				resultado = base*altura;
+				printf("\n----- Area = %.2lf -----\n", resultado);
+				break;
+			case 5:
+				printf("\nIngrese base menor: ");
+				scanf(" %lf", &baseMenor);
+				printf("Ingrese base mayor: ");
+				scanf(" %lf", &baseMayor);
+				printf("Ingrese altura: ");
+				scanf(" %lf", &altura);
+				resultado = ((baseMayor + baseMenor) * altura) / 2;
+				printf("\n----- Area = %.2lf -----\n", resultado);
+				break; 
+			case 6:
+				printf("\nSaliendo del programa...\nChao bai :)\n");
+				break;
+			default:
+				printf("\nOpcion no valida. Por favor ingresa un numero entre 1 y 6.");
+				break;
 				
-
+		}			
+	} while (opcion >= 1 && opcion <= 5);
 	return 0;
 }
+
